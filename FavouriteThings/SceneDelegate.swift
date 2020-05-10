@@ -25,6 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let context = appDelegate.persistentContainer.viewContext
+        
+        
+        
+        
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView().environment(\.managedObjectContext, context)

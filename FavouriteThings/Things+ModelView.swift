@@ -59,16 +59,3 @@ extension Things {
     
 }
   
-/*
- 
-        @Published var url: String?
-        @Published var name: String             // String containing the name of the ground
- //    @Published var location: String         // String containing the location of the ground
- //    @Published var capacity: String         // String containing the capacity of the ground
- //    @Published var opened: String           // String containing the opened date of the ground
- //    @Published var owner: String            // String containing the owner of the ground
- //    @Published var notes: String            // String containing the notes of the ground
- //    @Published var title_field1: String     // String containing the text_field1  of the ground
- //    @Published var title_field2: String     // String containing the text_field2  of the ground
- //    @Published var title_field3: String
- */

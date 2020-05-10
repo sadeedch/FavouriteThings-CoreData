@@ -42,10 +42,12 @@ struct DetailView: View {
                     .font(Font.system(size: 20))
                 /*  text field to enter the url of new image for a thing and the entered url is bounded to $tempImageURL.
                     this temporary value is then sent to the url property of class things. */
-                TextField("Paste the image URL here", text: $tempImageURL, onCommit: { self.things.url = self.tempImageURL
+                TextField("Paste the image URL here", text: $tempImageURL, onEditingChanged: {
+                    _ in try? self.context.save()
+                }, onCommit: { self.things.url = self.tempImageURL
                     }).textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                downloadedImage(things.boundUrl)
+                downloadedImage(things.url ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 350, height: 350)
