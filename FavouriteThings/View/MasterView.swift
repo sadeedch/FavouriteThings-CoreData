@@ -21,7 +21,7 @@ struct MasterView: View {
             if mode?.wrappedValue == .active {
                 HStack {
                     Text("✏️")
-                        //.font(Font.system(.largeTitle).bold())
+                        .font(Font.system(.largeTitle).bold())
                     TextField("Enter Title", text: $thingsList.boundTitle )
                         .font(Font.system(.largeTitle).bold())
                 }
@@ -34,9 +34,15 @@ struct MasterView: View {
                     }
                 //onDelete specifying the action to delete a particualr item
                 }.onDelete {indices in indices.forEach { self.thingsList.removeFromThings(at: $0) }}
-                //.onMove(perform: move)  // specifying the action to re-arrange an item in the list by using move function
+                 .onMove(perform: move)  // specifying the action to re-arrange an item in the list by using move function
             }
-        }.navigationBarTitle(mode?.wrappedValue == .active ?  "" : thingsList.title ?? "Favourite Grounds")
+        }.navigationBarTitle(mode?.wrappedValue == .active ?  "" : thingsList.title ?? "Favourite Grounds" )
     }
     
+    
+    func move (from source: IndexSet, to destination: Int){
+        self.thingsList.child.move(fromOffsets: source, toOffset: destination)
+        
+    }
 }
+

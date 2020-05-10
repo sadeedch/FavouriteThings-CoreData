@@ -18,9 +18,9 @@ struct RowView: View {
     var body: some View {
         // This horizontal stack contains the Ground image, Ground name and its location.
         HStack {
-            downloadedImage(thingsRow.url ?? "")
+            downloadedImage(thingsRow.url ?? "default")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                //.aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)    //  shows the ground image
             Text(self.thingsRow.boundName).bold()                                //  shows the ground name
             Text(self.thingsRow.boundLocation)                                   //  shows the ground location

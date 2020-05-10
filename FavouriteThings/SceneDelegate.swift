@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-
+import CoreData
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -25,11 +25,76 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let context = appDelegate.persistentContainer.viewContext
+          
         
-        
-        
-        
+        ///adding the default data
+        var thingsListData: [ThingsList] = [ThingsList]()
+               
+        let requestData = NSFetchRequest<ThingsList>(entityName: "ThingsList")
+               
+        do {
+            thingsListData = try context.fetch(requestData)
+            if thingsListData.count == 0 {
+                NSEntityDescription.insertNewObject(forEntityName: "ThingsList", into: context)
+                
+                thingsListData = try context.fetch(requestData)
 
+                
+                //Melbournce Cricket Ground
+                var data = Things(context: context)
+                data.thingslist = thingsListData.first
+                
+                data.thingslist?.boundTitle = "Favourite Grounds"
+                       
+                data.url = "https://www.abc.net.au/news/image/5175326-3x2-940x627.jpg"
+                data.name = "MCG"
+                data.location = "Melbourne"
+                data.title_field1 = "Capacity"
+                data.capacity = "100024"
+                data.title_field2 = "Opened"
+                data.opened = "1853"
+                data.title_field3 = "Owner"
+                data.owner = "Melbourne Cricket Club"
+                data.notes = "Best in the world"
+               
+                       
+                //Bribsane Cricket Ground
+                data = Things(context: context)
+                data.thingslist = thingsListData.first
+                data.url = "https://assets.atdw-online.com.au/images/58eb0e41d72e0aa26d1b765a8447629f.jpeg?rect=127%2c0%2c2053%2c1540&w=1200"
+                data.name = "Gabba"
+                data.location = "Brisbane"
+                data.title_field1 = "Capacity"
+                data.capacity = "42000"
+                data.title_field2 = "Opened"
+                data.opened = "1895"
+                data.title_field3 = "Owner"
+                data.owner = "Stadiums"
+                data.notes = "Brisbane's best stadium"
+                       
+                //Sydney CricketGround
+                data = Things(context: context)
+                data.thingslist = thingsListData.first
+                data.url = "https://www.austadiums.com/stadiums/photos/Sydney-Cricket-Ground.jpg"
+                data.name = "SCG"
+                data.location = "Sydney"
+                data.title_field1 = "Capacity"
+                data.capacity = "48601"
+                data.title_field2 = "Opened"
+                data.opened = "1848"
+                data.title_field3 = "Owner"
+                data.owner = "Sydney Cricket Ground Trust"
+                data.notes = " "
+           
+                try? context.save()
+                   }
+               }
+               catch {
+                   print("There is an error in the default data")
+               }
+               
+        
+        
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView().environment(\.managedObjectContext, context)
 
@@ -40,6 +105,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+    
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
