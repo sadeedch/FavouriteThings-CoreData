@@ -19,25 +19,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        
+        // getting the managed object context from shared persistent container
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                 fatalError("No app deleagate ")
         }
-        
         let context = appDelegate.persistentContainer.viewContext
           
         
-        ///adding the default data
+        // storing the default data
         var thingsListData: [ThingsList] = [ThingsList]()
-               
+        
+        // fetching the Things List
         let requestData = NSFetchRequest<ThingsList>(entityName: "ThingsList")
                
         do {
             thingsListData = try context.fetch(requestData)
+            // counting the thingsListData and if none is present, then add the following data
             if thingsListData.count == 0 {
+                //adding in a new ground/item
                 NSEntityDescription.insertNewObject(forEntityName: "ThingsList", into: context)
                 
-                thingsListData = try context.fetch(requestData)
+                //thingsListData = try context.fetch(requestData)
 
                 
                 //Melbournce Cricket Ground
@@ -85,13 +87,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.title_field3 = "Owner"
                 data.owner = "Sydney Cricket Ground Trust"
                 data.notes = " "
-           
+                
+                // saving the data
                 try? context.save()
-                   }
-               }
-               catch {
-                   print("There is an error in the default data")
-               }
+            }
+        }
+        catch {
+            print("There is an error in the default data")
+        }
                
         
         
@@ -137,6 +140,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         
+        // saves changings in the applications managed object context when the app is closed
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                 fatalError("No app deleagate ")
         }
@@ -145,7 +149,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _ = try? context.save()
         }
     }
-
-
 }
 

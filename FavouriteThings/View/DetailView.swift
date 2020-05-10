@@ -28,11 +28,9 @@ struct DetailView: View {
                     .fontWeight(.bold)
                     .font(Font.system(size: 20))
                     .multilineTextAlignment(.leading)
-                //  text field to enter the notes and the entered text is bounded to things.notes
-                TextField("Enter your notes...", text: $things.boundNotes
-                   // , onEditingChanged: {_ in try? self.context.save()}
-                )
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                //  text field to enter the notes and the entered text is bounded to things.boundNotes
+                TextField("Enter your notes...", text: $things.boundNotes)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }.frame(width: 350, height: nil)
             
             
@@ -45,13 +43,14 @@ struct DetailView: View {
                     this temporary value is then sent to the url property of class things. */
                 TextField("Paste the image URL here", text: $tempImageURL, onEditingChanged: {
                     _ in try? self.context.save()
-                }, onCommit: { self.things.url = self.tempImageURL
-                    }).textFieldStyle(RoundedBorderTextFieldStyle())
+                }, onCommit: { self.things.url = self.tempImageURL})
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                downloadedImage(things.url ?? "")
-                .resizable()
-                .frame(width: 350, height: 350)
-                .multilineTextAlignment(.center)
+                //downloadedImage function being used here to display the image
+                downloadedImage(things.url ?? "default")
+                    .resizable()
+                    .frame(width: 350, height: 350)
+                    .multilineTextAlignment(.center)
             }.frame(width: 350, height: nil)
             
            

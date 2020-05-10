@@ -39,7 +39,7 @@ struct MasterView: View {
         }.navigationBarTitle(mode?.wrappedValue == .active ?  "" : thingsList.title ?? "Favourite Grounds" )
     }
     
-    
+    /// function move to re-arrange an item in the list
     func move (from source: IndexSet, to destination: Int){
         self.thingsList.child.move(fromOffsets: source, toOffset: destination)
         

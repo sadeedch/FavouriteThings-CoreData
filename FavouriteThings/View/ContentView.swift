@@ -24,7 +24,7 @@ struct ContentView: View {
                 in action. */
             .navigationBarItems(leading: EditButton(),
             trailing: Button( action: {
-                  withAnimation {
+                  withAnimation { //adding a new entry
                     let new = Things(context: self.context)
                     new.thingslist = self.thingsList.first
                     try? self.context.save()
