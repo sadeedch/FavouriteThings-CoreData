@@ -13,10 +13,43 @@ import CoreLocation
 struct LocationView: View {
     @ObservedObject var location: Things
     @Environment(\.managedObjectContext) var context
+    @State var currentPosition = CLLocationCoordinate2D()
     
+    @State var locationName = ""
+    @State var latitudeString = ""
+    @State var longitudeString = ""
     
+                                
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            
+            HStack {
+                Text("Location Name...")
+                TextField("Enter location name", text: self.$locationName)
+            }
+            
+            HStack {
+                Text("Latitude...")
+                TextField("Enter location name", text: self.$latitudeString)
+            }
+               
+            
+            
+            HStack {
+                Text("Longitude...")
+                TextField("Enter location name", text: self.$longitudeString)
+            }
+           
+            
+            
+        }
+        
+        
+        
+        
+        
+        
     }
 }
 
