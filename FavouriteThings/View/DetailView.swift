@@ -19,7 +19,7 @@ struct DetailView: View {
     @Environment(\.managedObjectContext) var context
     @State var tempImageURL: String = ""      // tempImageURL : a temporary variable to hold the url of image entered by user
     var body: some View {
-        
+        ScrollView(.vertical){
         VStack(alignment: .center) {               // all the Things data shown in this view is included in this Vertical Stack.
             
             VStack(alignment: .center) {  // This vertical stack shows the Text Field to enter the notes
@@ -67,9 +67,11 @@ struct DetailView: View {
                     
                  }.frame(width: 300, alignment: .leading)
             
-//            VStack() {
-//                NavigationLink(Destination: LocationView())
-//            }
+            //VStack() {
+            NavigationLink(destination: LocationView(location: things, locationName: things.boundLoaction, latitudeString: things.boundLatitude, longitudeString: things.boundLongitude )) {
+                Text("Loaction")
+            }
+            //}
             
             
             
@@ -96,6 +98,7 @@ struct DetailView: View {
                 }
             }.frame(width: 300, alignment: .leading)
         }
+    }
     }
 }
 
