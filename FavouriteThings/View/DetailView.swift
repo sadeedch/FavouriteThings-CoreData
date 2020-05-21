@@ -55,17 +55,21 @@ struct DetailView: View {
             
            
         
-            // Vertical Stack to show the Ground name and location.
+            // Vertical Stack to show the Ground name and sports type.
             VStack() {
                 
                 TextField("Item name...", text: $things.boundName)
                     .font(.largeTitle)
                 
-                TextField("Location...", text: $things.boundLocation)
+                TextField("Sports Type...", text: $things.boundSportsType)
                     .font(.subheadline)
                     .padding(.bottom)
                     
                  }.frame(width: 300, alignment: .leading)
+            
+//            VStack() {
+//                NavigationLink(Destination: LocationView())
+//            }
             
             
             

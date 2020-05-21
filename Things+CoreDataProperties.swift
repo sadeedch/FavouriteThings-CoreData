@@ -18,7 +18,7 @@ extension Things {
     }
 
     @NSManaged public var capacity: String?
-    @NSManaged public var location: String?
+    @NSManaged public var sportsType: String?
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
     @NSManaged public var opened: String?

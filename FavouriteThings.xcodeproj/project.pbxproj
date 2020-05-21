@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E234F7702476D5EB0007E970 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234F76F2476D5EB0007E970 /* LocationView.swift */; };
 		E243968A24630083004B3F2F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E243968924630083004B3F2F /* CoreData.framework */; };
 		E243968D24630D02004B3F2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E243968C24630D02004B3F2F /* ContentView.swift */; };
 		E243968F24630D11004B3F2F /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E243968E24630D11004B3F2F /* RowView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E234F76F2476D5EB0007E970 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E24396802462FEC6004B3F2F /* Things+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Things+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E24396812462FEC6004B3F2F /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E24396822462FEC6004B3F2F /* ThingsList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThingsList+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				E243968C24630D02004B3F2F /* ContentView.swift */,
 				E243968E24630D11004B3F2F /* RowView.swift */,
+				E234F76F2476D5EB0007E970 /* LocationView.swift */,
 				E243969024630D18004B3F2F /* MasterView.swift */,
 				E243969224630D26004B3F2F /* DetailView.swift */,
 			);
@@ -318,6 +321,7 @@
 			files = (
 				E2AF00CD2462E60700AD3F79 /* AppDelegate.swift in Sources */,
 				E243969B24630EEB004B3F2F /* Image.swift in Sources */,
+				E234F7702476D5EB0007E970 /* LocationView.swift in Sources */,
 				E243969324630D26004B3F2F /* DetailView.swift in Sources */,
 				E243969D24632C70004B3F2F /* ThingsList+ViewModel.swift in Sources */,
 				E243968F24630D11004B3F2F /* RowView.swift in Sources */,

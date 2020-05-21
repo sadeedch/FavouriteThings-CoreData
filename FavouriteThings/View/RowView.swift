@@ -23,7 +23,7 @@ struct RowView: View {
                 .resizable()
                 .frame(width: 120, height: 120)
             Text(self.thingsRow.boundName).bold()     //  shows the ground name
-            Text(self.thingsRow.boundLocation)        //  shows the ground location
+            Text(self.thingsRow.boundSportsType)        //  shows the ground location
         }
     }
 }

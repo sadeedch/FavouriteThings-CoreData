@@ -26,9 +26,9 @@ extension Things {
     }
     
     // variable boundLocation getting the location value from CoreData
-    var boundLocation: String {
-        get{ location ?? ""}
-        set{ location = newValue}
+    var boundSportsType: String {
+        get{ sportsType ?? ""}
+        set{ sportsType = newValue}
     }
     
     // variable boundCapacity getting the capacity value from CoreData
@@ -72,6 +72,22 @@ extension Things {
         get{ title_field3 ?? ""}
         set{ title_field3 = newValue}
     }
+    
+    var boundLoaction: String {
+        get{ location ?? ""}
+        set{ location = newValue}
+    }
+
+    var boundLatitude: String {
+        get{ latitude ?? ""}
+        set{ latitude = newValue}
+    }
+
+    var boundLongitude: String {
+        get{ longitude ?? ""}
+        set{ longitude = newValue}
+    }
+
     
     
 }

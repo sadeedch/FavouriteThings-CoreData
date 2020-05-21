@@ -2,11 +2,14 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Things" representedClassName="Things" syncable="YES" codeGenerationType="class">
         <attribute name="capacity" attributeType="String" defaultValueString=""/>
-        <attribute name="location" attributeType="String" defaultValueString=""/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="notes" attributeType="String" defaultValueString=""/>
         <attribute name="opened" attributeType="String" defaultValueString=""/>
         <attribute name="owner" attributeType="String" defaultValueString=""/>
+        <attribute name="sportsType" attributeType="String" defaultValueString=""/>
         <attribute name="title_field1" attributeType="String" defaultValueString=""/>
         <attribute name="title_field2" attributeType="String" defaultValueString=""/>
         <attribute name="title_field3" attributeType="String" defaultValueString=""/>
@@ -18,7 +21,7 @@
         <relationship name="things" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Things" inverseName="thingslist" inverseEntity="Things"/>
     </entity>
     <elements>
-        <element name="Things" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="Things" positionX="-63" positionY="-18" width="128" height="253"/>
         <element name="ThingsList" positionX="-331.04296875" positionY="1.625" width="128" height="73"/>
     </elements>
 </model>

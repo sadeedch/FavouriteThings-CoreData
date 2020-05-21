@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 //adding in a new ground/item
                 NSEntityDescription.insertNewObject(forEntityName: "ThingsList", into: context)
                 
-                //thingsListData = try context.fetch(requestData)
+                thingsListData = try context.fetch(requestData)
 
                 
                 //Melbournce Cricket Ground
@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                        
                 data.url = "https://www.abc.net.au/news/image/5175326-3x2-940x627.jpg"
                 data.name = "MCG"
-                data.location = "Melbourne"
+                data.sportsType = "Cricket Stadium"
                 data.title_field1 = "Capacity"
                 data.capacity = "100024"
                 data.title_field2 = "Opened"
@@ -65,7 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.thingslist = thingsListData.first
                 data.url = "https://assets.atdw-online.com.au/images/58eb0e41d72e0aa26d1b765a8447629f.jpeg?rect=127%2c0%2c2053%2c1540&w=1200"
                 data.name = "Gabba"
-                data.location = "Brisbane"
+                data.sportsType = "Cricket Stadium"
                 data.title_field1 = "Capacity"
                 data.capacity = "42000"
                 data.title_field2 = "Opened"
@@ -79,7 +79,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.thingslist = thingsListData.first
                 data.url = "https://www.austadiums.com/stadiums/photos/Sydney-Cricket-Ground.jpg"
                 data.name = "SCG"
-                data.location = "Sydney"
+                data.sportsType = "Cricket Stadium"
                 data.title_field1 = "Capacity"
                 data.capacity = "48601"
                 data.title_field2 = "Opened"
