@@ -22,6 +22,8 @@ struct LocationView: View {
     
     var body: some View {
         
+        ScrollView(.vertical){
+        
         VStack(alignment: .center) {
             
             
@@ -47,8 +49,11 @@ struct LocationView: View {
                         let position = location.coordinate
                         self.currentPosition.latitude = position.latitude
                         self.currentPosition.longitude = position.longitude
-                        self.latitudeString = "\(position.latitude)"
-                        self.longitudeString = "\(position.longitude)"
+                        self.location.boundLatitude = "\(position.latitude)"
+                        self.latitudeString = self.location.boundLatitude
+                        self.location.boundLongitude = "\(position.longitude)"
+                        self.longitudeString = self.location.boundLongitude
+                        self.location.boundLoaction = self.locationName
                         
                     }
                 try? self.context.save()
@@ -81,6 +86,10 @@ struct LocationView: View {
                             }
                         
                         self.locationName = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
+                        
+                        self.locationName = self.location.boundLoaction
+                        self.location.boundLatitude = self.latitudeString
+                        self.location.boundLongitude = self.longitudeString
                         
                     }
                 try? self.context.save()
@@ -116,10 +125,15 @@ struct LocationView: View {
                         
                         self.locationName = placemark.name ?? placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.country ?? "<unknown>"
                         
+                        self.locationName = self.location.boundLoaction
+                        self.location.boundLatitude = self.latitudeString
+                        self.location.boundLongitude = self.longitudeString
+                        
                     }
                 try? self.context.save()
                 })
             }
+        }
         }.frame(width: 300)
         .offset(x: 0, y: CGFloat(-(keyboard.h + 50)))
     }

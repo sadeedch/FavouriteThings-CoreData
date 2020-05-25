@@ -49,9 +49,12 @@ struct DetailView: View {
                  }.frame(width: 300, alignment: .leading)
             
             //VStack() {
-            NavigationLink(destination: LocationView(location: things, locationName: things.boundLoaction, latitudeString: things.boundLatitude, longitudeString: things.boundLongitude )) {
+            NavigationLink(destination: LocationView(location: things, locationName: things.boundLoaction, latitudeString: things.boundLatitude, longitudeString: things.boundLongitude)) {
                 Text("Loaction:").bold()
+                Text(self.things.boundLoaction)
             }
+            Spacer()
+           
             
            VStack(alignment: .center) {  // This vertical stack shows the Text Field to enter the notes
                 Text("Image URL:")

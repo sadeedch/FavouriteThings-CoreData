@@ -58,6 +58,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.title_field3 = "Owner"
                 data.owner = "Melbourne Cricket Club"
                 data.notes = "Best in the world"
+                data.boundLoaction = "Brunton Ave, Richmond VIC"
+                data.boundLatitude = "-37.8231702"
+                data.boundLongitude = "144.989093"
+                
                
                        
                 //Bribsane Cricket Ground
@@ -73,6 +77,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.title_field3 = "Owner"
                 data.owner = "Stadiums"
                 data.notes = "Brisbane's best stadium"
+                data.boundLoaction = "Vulture street, Woolongabba, Brisbane"
+                data.boundLatitude = "-27.4845041"
+                data.boundLongitude = "153.0323669"
                        
                 //Sydney CricketGround
                 data = Things(context: context)
@@ -87,6 +94,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 data.title_field3 = "Owner"
                 data.owner = "Sydney Cricket Ground Trust"
                 data.notes = " "
+                data.boundLoaction = "Moore Park, Sydney"
+                data.boundLatitude = "-33.9009291"
+                data.boundLongitude = "151.2152663"
+                
                 
                 // saving the data
                 try? context.save()
