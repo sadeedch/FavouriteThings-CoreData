@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+/// Class keyboard will make the text fields to shift up and not cover them when its active
 class Keyboard: ObservableObject {
     @Published var frame = CGRect()
     var x: Int { Int(frame.origin.x) }

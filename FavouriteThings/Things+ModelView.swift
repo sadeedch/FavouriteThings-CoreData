@@ -73,16 +73,19 @@ extension Things {
         set{ title_field3 = newValue}
     }
     
+    // variable boundLoaction getting the location value from CoreData
     var boundLoaction: String {
         get{ location ?? ""}
         set{ location = newValue}
     }
-
+    
+    // variable boundLatitude getting the latitude value from CoreData
     var boundLatitude: String {
         get{ latitude ?? ""}
         set{ latitude = newValue}
     }
 
+    // variable boundLongitude getting the longitude value from CoreData
     var boundLongitude: String {
         get{ longitude ?? ""}
         set{ longitude = newValue}

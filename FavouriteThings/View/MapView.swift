@@ -16,12 +16,14 @@ struct MapView: UIViewRepresentable {
     @ObservedObject var things: Things
     @ObservedObject var locModel: LocationModel
    
+    /// function which creates and return an empty MKMapView
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView(frame: .zero)
         map.delegate = locModel
         return map
     }
     
+     /// function which updates the view
     func updateUIView(_ map: MKMapView, context: Context) {
         
         let coordinate = CLLocationCoordinate2D(latitude: Double(self.things.boundLatitude) ?? 0, longitude: Double(self.things.boundLongitude) ?? 0)
@@ -29,7 +31,6 @@ struct MapView: UIViewRepresentable {
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 5_000, longitudinalMeters: 5_000)
         map.setRegion(region, animated: true)
     }
-    
     
 }
 
