@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21A037E247C4E3100F34603 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A037D247C4E3100F34603 /* MapView.swift */; };
+		E21A0387247C5B1F00F34603 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A0386247C5B1F00F34603 /* LocationModel.swift */; };
 		E234F7702476D5EB0007E970 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234F76F2476D5EB0007E970 /* LocationView.swift */; };
 		E234F7722476D6F30007E970 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E234F7712476D6F30007E970 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E234F77A2476EF650007E970 /* keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234F7792476EF650007E970 /* keyboard.swift */; };
 		E243968A24630083004B3F2F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E243968924630083004B3F2F /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E243968D24630D02004B3F2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E243968C24630D02004B3F2F /* ContentView.swift */; };
 		E243968F24630D11004B3F2F /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E243968E24630D11004B3F2F /* RowView.swift */; };
@@ -45,8 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21A037D247C4E3100F34603 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E21A0386247C5B1F00F34603 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E234F76F2476D5EB0007E970 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E234F7712476D6F30007E970 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E234F7792476EF650007E970 /* keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboard.swift; sourceTree = "<group>"; };
 		E24396802462FEC6004B3F2F /* Things+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Things+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E24396812462FEC6004B3F2F /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E24396822462FEC6004B3F2F /* ThingsList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThingsList+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 				E243968E24630D11004B3F2F /* RowView.swift */,
 				E234F76F2476D5EB0007E970 /* LocationView.swift */,
 				E243969024630D18004B3F2F /* MasterView.swift */,
+				E21A037D247C4E3100F34603 /* MapView.swift */,
 				E243969224630D26004B3F2F /* DetailView.swift */,
 			);
 			path = View;
@@ -154,7 +161,9 @@
 				E243968B24630CEA004B3F2F /* View */,
 				E2AF00CC2462E60700AD3F79 /* AppDelegate.swift */,
 				E2AF00CE2462E60700AD3F79 /* SceneDelegate.swift */,
+				E234F7792476EF650007E970 /* keyboard.swift */,
 				E243969E24646360004B3F2F /* Things+ModelView.swift */,
+				E21A0386247C5B1F00F34603 /* LocationModel.swift */,
 				E243969C24632C70004B3F2F /* ThingsList+ViewModel.swift */,
 				E243969A24630EEB004B3F2F /* Image.swift */,
 				E2AF00FC2462E6DD00AD3F79 /* FavouriteThings.xcdatamodeld */,
@@ -327,12 +336,15 @@
 				E243969B24630EEB004B3F2F /* Image.swift in Sources */,
 				E234F7702476D5EB0007E970 /* LocationView.swift in Sources */,
 				E243969324630D26004B3F2F /* DetailView.swift in Sources */,
+				E21A037E247C4E3100F34603 /* MapView.swift in Sources */,
 				E243969D24632C70004B3F2F /* ThingsList+ViewModel.swift in Sources */,
 				E243968F24630D11004B3F2F /* RowView.swift in Sources */,
+				E234F77A2476EF650007E970 /* keyboard.swift in Sources */,
 				E243969124630D18004B3F2F /* MasterView.swift in Sources */,
 				E243969F24646360004B3F2F /* Things+ModelView.swift in Sources */,
 				E243968D24630D02004B3F2F /* ContentView.swift in Sources */,
 				E2AF00CF2462E60700AD3F79 /* SceneDelegate.swift in Sources */,
+				E21A0387247C5B1F00F34603 /* LocationModel.swift in Sources */,
 				E2AF00FE2462E6DD00AD3F79 /* FavouriteThings.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
