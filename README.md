@@ -1,6 +1,6 @@
 # FavouriteThings - Referencer
 
-** iOS based Mobile applicaiton enabling the users to keep track of their favourite items with the option of adding notes, downloading pictures as well as selecting a location.  ** 
+**iOS based Mobile applicaiton enabling the users to keep track of their favourite items with the option of adding notes, downloading pictures as well as selecting a location.** 
 
 
 
