@@ -4,7 +4,7 @@
 
 
 
-## Fucntions and Technical Aspects:
+## Functions and Technical Aspects:
 
 
 :iphone:	a Mobile application which enables the user to create a  list of favourite items. 
