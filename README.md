@@ -1,5 +1,8 @@
 # FavouriteThings - Referencer
-### iOS based Mobile applicaiton enabling the users to keep track of their favourite items with the option of adding notes, downloading pictures as well as selecting a location. 
+
+** iOS based Mobile applicaiton enabling the users to keep track of their favourite items with the option of adding notes, downloading pictures as well as selecting a location.  ** 
+
+
 
 ## Fucntions and Technical Aspects:
 
@@ -11,4 +14,5 @@
 :iphone: Image uploading and location including functionality by the use of MapKit and Geo Coding frameworks. 
 
 :iphone: Use of Model-View paradigm, Separation of concerns and all the functionalities of a fully-fledged mobile application. 
+
 
